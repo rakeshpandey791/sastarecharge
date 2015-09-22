@@ -1,0 +1,219 @@
+<div class="row-fluid" >
+  <div class="col-md-12">
+      <nav class="navbar navbar-default navbar-fixed-top" style="padding:1% 0% 0% 8%;">
+          <div class="row">
+              <!-- <div class="col-md-1">&nbsp;</div> -->
+              <div class="col-md-4">
+                <span style="font-size: 35px;color: deepskyblue;">Sasta</span><span style="font-size: 35px;color: purple;">Recharge</span>
+              </div>
+              <div class="col-md-4">
+                  <md-input-container class="md-icon-float" >
+                    <!-- Use floating label instead of placeholder -->
+                    <label>Search Keyword</label>
+                    <md-icon md-svg-src="img/icons/ic_search_black_24px.svg" class="name"></md-icon>
+                    <input ng-model="user.name" type="text">
+                  </md-input-container>
+              </div>
+              <div class="col-md-3">
+                  <ul class="nav navbar-nav user-menu-placement">
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Rakesh Pandey <span class="caret"></span></a>
+                      <ul class="dropdown-menu">
+                        <li><a href="#">Credits</a></li>
+                        <li><a href="#">Profile</a></li>
+                        <li><a href="#">Logout</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+              </div>
+              <div class="col-md-1">&nbsp;</div>
+              
+          </div>
+      </nav>
+  </div>
+</div>
+  <div class="row-fluid margin-top">
+    <!-- <div class="col-md-1">&nbsp;</div> -->
+    <div class="col-md-12">
+      <md-tabs md-selected="data.selectedIndex"  md-border-bottom md-autoselect md-dynamic-height="true">
+        <md-tab id="tab1">
+          <md-tab-label>Mobile</md-tab-label>
+          <md-tab-body>
+			<div class="row-fluid" style="padding-top:3%;">
+				<div class="col-md-12">
+					
+						<md-radio-group ng-model="data.group1">
+							<div class="row" style="margin-left: -42px;">
+							  <div class="col-md-3"><md-radio-button value="prepaid" class="md-primary">Prepaid Mobile</md-radio-button></div>
+							  <div class="col-md-3 margin-left-60"><md-radio-button value="postpaid" class="md-primary"> Postpaid Mobile </md-radio-button></div>
+							</div>
+							<div class="row">
+								<div class="col-md-4">
+									<div class="row">
+										<md-input-container>
+											<label>Enter Mobile Number</label>
+											<input type="text">
+										</md-input-container>
+									</div><br>
+									<div class="row">
+										<md-autocomplete placeholder="Select Your Operator"
+          md-menu-class="autocomplete-custom-template" md-items="item in operators" md-item-text="item.name"
+          md-min-length="0">
+											<md-item-template>
+											  <span class="item-title">
+												<img src="img/operator/{{item.icon}}">
+												<span> {{item.name}} </span>
+											  </span>
+											</md-item-template>
+											<md-not-found>
+											No matches found.
+										  </md-not-found>
+										</md-autocomplete>
+									</div><br>
+									<div class="row">
+										<md-input-container>
+											<label>Enter Recharge Amount</label>
+											<input type="text">
+										</md-input-container>
+									</div><br>
+									<div class="row">
+										<md-checkbox md-no-ink aria-label="Fast Forward It" class="md-primary">
+										  Fast Forward It
+										  <small>(Instant, One Touch Payment)</small>
+										</md-checkbox>
+									</div><br>
+									<div class="row">
+										<md-button class="md-raised md-primary btn-block">Proceed To Recharge</md-button>
+									</div><br>
+								</div>
+                <div class="col-md-8">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div style="border:1px solid rgb(63,81,181)">
+                    <md-toolbar class="md-primary">
+                      <div class="md-toolbar-tools">
+                        <div class="row">
+                          <div class="col-md-2 hidden-xs hidden-sm hidden-md">
+                              <img src="img/operator/idea.png">
+                          </div>
+                          <div class="col-md-10">
+                            <h2 class="md-flex">Browse plans of Idea Delhi NCR</h2>
+                          </div>
+                        </div>
+                        
+                      </div>
+                    </md-toolbar>
+                    <div style="height:305px;">
+                      <md-content class="md-padding">
+                        <md-tabs md-dynamic-height md-border-bottom>
+                          <md-tab label="Full Talktime">
+                            <md-content class="md-padding">
+                              <h1 class="md-display-2">Full Talktime</h1>
+                              
+                            </md-content>
+                          </md-tab>
+                          <md-tab label="Special Recharge">
+                            <md-content class="md-padding">
+                              <h1 class="md-display-2">Special Recharge</h1>
+                              
+                            </md-content>
+                          </md-tab>
+                          <md-tab label="2G Data">
+                            <md-content class="md-padding">
+                              <h1 class="md-display-2">2G Data</h1>
+                              
+                            </md-content>
+                          </md-tab>
+                          <md-tab label="3G Data">
+                            <md-content class="md-padding">
+                              <h1 class="md-display-2">3G Data</h1>
+                             
+                            </md-content>
+                          </md-tab>
+                          <md-tab label="Roaming">
+                            <md-content class="md-padding">
+                              <h1 class="md-display-2">Roaming</h1>
+                              
+                            </md-content>
+                          </md-tab>
+                          <md-tab label="Topup">
+                            <md-content class="md-padding">
+                              <h1 class="md-display-2">Topup</h1>
+                              
+                            </md-content>
+                          </md-tab>
+                        </md-tabs>
+                      </md-content>
+                    </div>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+							</div>
+						</md-radio-group>
+					
+				</div>
+			</div>
+          </md-tab-body>
+        </md-tab>
+        <md-tab id="tab2">
+          <md-tab-label>Dth</md-tab-label>
+          <md-tab-body>
+            View for Item #2 <br/>
+            data.selectedIndex = 1;
+          </md-tab-body>
+        </md-tab>
+        <md-tab id="tab3">
+          <md-tab-label>Data Card</md-tab-label>
+          <md-tab-body>
+            View for Item #3 <br/>
+            data.selectedIndex = 2;
+          </md-tab-body>
+        </md-tab>
+        <md-tab id="tab4">
+          <md-tab-label>Landline</md-tab-label>
+          <md-tab-body>
+            View for Item #4 <br/>
+            data.selectedIndex = 3;
+          </md-tab-body>
+        </md-tab>
+        <md-tab id="tab5">
+          <md-tab-label>Electricity</md-tab-label>
+          <md-tab-body>
+            View for Item #5 <br/>
+            data.selectedIndex = 4;
+          </md-tab-body>
+        </md-tab>
+        <md-tab id="tab6">
+          <md-tab-label>Gas</md-tab-label>
+          <md-tab-body>
+            View for Item #6 <br/>
+            data.selectedIndex = 5;
+          </md-tab-body>
+        </md-tab>
+        <md-tab id="tab7">
+          <md-tab-label>Insurance</md-tab-label>
+          <md-tab-body>
+            View for Item #7 <br/>
+            data.selectedIndex = 6;
+          </md-tab-body>
+        </md-tab>
+      </md-tabs>
+      </div>
+      <!-- <div class="col-md-1">&nbsp;</div> -->
+  </div><br />
+  <footer>
+       
+          <p class="pull-left"> Copyright © SastaRecharge 2015. All right reserved. </p>
+            <div class="pull-right" style="margin-right: 45px;">
+                <ul class="nav nav-pills payments">
+                  <li><i class="fa fa-cc-visa"></i></li>
+                    <li><i class="fa fa-cc-mastercard"></i></li>
+                    <li><i class="fa fa-cc-amex"></i></li>
+                    <li><i class="fa fa-cc-paypal"></i></li>
+                </ul> 
+            </div>
+      </footer>
+  
+ 
+ 
